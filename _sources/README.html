@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>2.1. Writing Content &#8212; Jupyter Book Demo</title>
+    <title>&lt;no title&gt; &#8212; Jupyter Book Demo</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -53,8 +53,6 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2.2. Building the Book" href="build.html" />
-    <link rel="prev" title="2. Documentation Chapter" href="intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -89,7 +87,7 @@
   </a>
  </li>
 </ul>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../chap-demo/intro.html">
    1. Demonstration Chapter
@@ -107,23 +105,23 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="intro.html">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../chap-doc/intro.html">
    2. Documentation Chapter
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chap-doc/content.html">
      2.1. Writing Content
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="build.html">
+    <a class="reference internal" href="../chap-doc/build.html">
      2.2. Building the Book
     </a>
    </li>
@@ -170,9 +168,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/chap-doc/content.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/_sources/README.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
+                data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -190,28 +188,19 @@
 
             <!-- Launch buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/adamwangdata/JupyterBookDemo/main?urlpath=tree/chap-doc/content.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
-    </div>
-</div>
-
         </div>
 
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -220,10 +209,7 @@
         
               <div>
                 
-  <div class="section" id="writing-content">
-<h1><span class="section-number">2.1. </span>Writing Content<a class="headerlink" href="#writing-content" title="Permalink to this headline">¶</a></h1>
-<p>This section describes how to write content produced in this book.</p>
-</div>
+  <p>Source files for book at …</p>
 
     <script type="text/x-thebe-config">
     {
@@ -238,7 +224,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./chap-doc"
+            path: "./_sources"
         },
         predefinedOutput: true
     }
@@ -250,8 +236,6 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="intro.html" title="previous page"><span class="section-number">2. </span>Documentation Chapter</a>
-    <a class='right-next' id="next-link" href="build.html" title="next page"><span class="section-number">2.2. </span>Building the Book</a>
 
         </div>
         
