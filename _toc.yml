@@ -1,0 +1,14 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+- file: preface
+  numbered: true
+
+- file: chap-demo/intro
+  sections:
+    - file: chap-demo/fourier
+
+- file: chap-doc/intro
+  sections:
+    - file: chap-doc/content
+    - file: chap-doc/build

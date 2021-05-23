@@ -1,0 +1,17 @@
+# Book settings
+# Full _config.yml defaults at https://jupyterbook.org/customize/config.html
+
+title: Jupyter Book Demo
+author: Adam Wang
+
+execute:
+  execute_notebooks: auto
+
+parse:
+  myst_enable_extensions:
+    - dollarmath
+    - amsmath
+
+launch_buttons:
+  notebook_enterface: "classic"
+  binderhub_url: "https://mybinder.org"
