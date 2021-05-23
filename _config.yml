@@ -18,3 +18,4 @@ launch_buttons:
 
 repository:
   url: https://github.com/adamwangdata/JupyterBookDemo
+  branch: main
