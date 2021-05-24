@@ -12,3 +12,7 @@
   sections:
     - file: chap-doc/content
     - file: chap-doc/build
+
+- file: chap-testing/intro
+  sections:
+    - file: chap-testing/widgets
