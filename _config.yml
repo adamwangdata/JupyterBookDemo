@@ -13,8 +13,9 @@ parse:
     - amsmath
 
 launch_buttons:
-  notebook_enterface: "classic"
+  notebook_interface: "classic"
   binderhub_url: "https://mybinder.org"
+  thebe: true
 
 repository:
   url: https://github.com/adamwangdata/JupyterBookDemo
