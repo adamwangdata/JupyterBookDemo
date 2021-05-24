@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>2.2. Building the Book &#8212; Jupyter Book Demo</title>
+    <title>3.1. Widgets test &#8212; Jupyter Book Demo</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -53,8 +53,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="3. Testing Chapter" href="../chap-testing/intro.html" />
-    <link rel="prev" title="2.1. Writing Content" href="content.html" />
+    <link rel="prev" title="3. Testing Chapter" href="intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -107,40 +106,40 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="intro.html">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../chap-doc/intro.html">
    2. Documentation Chapter
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="content.html">
-     2.1. Writing Content
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     2.2. Building the Book
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../chap-testing/intro.html">
-   3. Testing Chapter
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chap-testing/widgets.html">
+    <a class="reference internal" href="../chap-doc/content.html">
+     2.1. Writing Content
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chap-doc/build.html">
+     2.2. Building the Book
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="intro.html">
+   3. Testing Chapter
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      3.1. Widgets test
     </a>
    </li>
@@ -187,7 +186,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/chap-doc/build.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/chap-testing/widgets.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -212,7 +211,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/adamwangdata/JupyterBookDemo/main?urlpath=tree/chap-doc/build.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/adamwangdata/JupyterBookDemo/main?urlpath=tree/chap-testing/widgets.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -256,9 +255,49 @@
 </div>
 </div>
 </div>
-<div class="section" id="building-the-book">
-<h1><span class="section-number">2.2. </span>Building the Book<a class="headerlink" href="#building-the-book" title="Permalink to this headline">¶</a></h1>
-<p>This section describes how to build the book, given content.</p>
+<div class="section" id="widgets-test">
+<h1><span class="section-number">3.1. </span>Widgets test<a class="headerlink" href="#widgets-test" title="Permalink to this headline">¶</a></h1>
+<p>Below is a test of matplotlib widgets.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">matplotlib.widgets</span> <span class="kn">import</span> <span class="n">Slider</span>
+
+<span class="k">def</span> <span class="nf">get_fourier_sums</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">N</span><span class="p">):</span>
+    <span class="n">fourier_sums</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">xs</span><span class="p">))</span> <span class="o">+</span> <span class="mf">.5</span>
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">fourier_sums</span> <span class="o">-=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">n</span><span class="o">*</span><span class="n">xs</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">n</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">fourier_sums</span>
+
+<span class="n">dx</span> <span class="o">=</span> <span class="mf">.01</span>
+<span class="n">xs</span><span class="p">,</span> <span class="n">N</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="o">+</span><span class="n">dx</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">dx</span><span class="p">),</span> <span class="mi">1</span>
+
+<span class="c1"># Initialize the plot.</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">left</span><span class="o">=</span><span class="mf">0.25</span><span class="p">,</span> <span class="n">bottom</span><span class="o">=</span><span class="mf">0.25</span><span class="p">)</span>  <span class="c1"># Make room for sliders.</span>
+<span class="p">[</span><span class="n">line</span><span class="p">]</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">get_fourier_sums</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">N</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+
+<span class="c1"># Create parameter sliders.</span>
+<span class="n">ax_N</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">([</span><span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.65</span><span class="p">,</span> <span class="mf">0.03</span><span class="p">])</span>
+<span class="n">slider_N</span> <span class="o">=</span> <span class="n">Slider</span><span class="p">(</span><span class="n">ax_N</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$N$&#39;</span><span class="p">,</span> <span class="n">valmin</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">valmax</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">valstep</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">valinit</span><span class="o">=</span><span class="n">N</span><span class="p">)</span>
+
+<span class="c1"># Update sliders.</span>
+<span class="k">def</span> <span class="nf">update_plot</span><span class="p">(</span><span class="n">val</span><span class="p">):</span>
+    <span class="n">N</span> <span class="o">=</span> <span class="n">slider_N</span><span class="o">.</span><span class="n">val</span>
+    <span class="n">line</span><span class="o">.</span><span class="n">set_ydata</span><span class="p">(</span><span class="n">get_fourier_sums</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">N</span><span class="p">))</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">draw_idle</span><span class="p">()</span>  <span class="c1"># Redraw with new slider parameters.</span>
+
+<span class="n">slider_N</span><span class="o">.</span><span class="n">on_changed</span><span class="p">(</span><span class="n">update_plot</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/widgets_3_0.png" src="../_images/widgets_3_0.png" />
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -274,7 +313,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./chap-doc"
+            path: "./chap-testing"
         },
         predefinedOutput: true
     }
@@ -286,8 +325,7 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="content.html" title="previous page"><span class="section-number">2.1. </span>Writing Content</a>
-    <a class='right-next' id="next-link" href="../chap-testing/intro.html" title="next page"><span class="section-number">3. </span>Testing Chapter</a>
+    <a class='left-prev' id="prev-link" href="intro.html" title="previous page"><span class="section-number">3. </span>Testing Chapter</a>
 
         </div>
         
