@@ -2,3 +2,4 @@ matplotlib
 sympy
 widgetsnbextension
 ipywidgets
+ipympl
